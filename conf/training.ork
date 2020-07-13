@@ -1,0 +1,11 @@
+pipeline1:
+  type: LinemodTrainer
+  module: 'object_recognition_linemod'
+  parameters:
+    # The list of object_ids to analyze
+    object_ids: 'all'
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'
+    config_json_path: '/home/makino/catkin_ws/src/makino_robotics/recognition_data_config/config/training.json'
